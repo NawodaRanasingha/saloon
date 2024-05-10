@@ -3,22 +3,59 @@
 
 
 
-<div class="main">
-    <div class="img">
-   <img src="images/WhatsApp Image 2024-04-30 at 08.54.43_6eb4f92e - Copy.jpg" alt="Fishing image">
+  
+
+  <div class="frm">
+     
+    <div class="lg"> 
+        <img src="images/WhatsApp Image 2024-04-30 at 08.54.51_e33fb7b6.jpg" alt="Logo" width="150">
+         <h2>Login</h2>
+         <p>I have an already created account</p>
+
+         <label class="errMsg">
+          <?php echo "$err";?>
+      </label>
+
+         <form action="" method="post">
+            <input type="text" name="username" id="uname" placeholder="Username" required>
+            <input type="password" name="password" id="pswd" placeholder="Password" required>
+            <input type="submit" value="Login">
+         </form>
     </div>
 
-    <div class="form">
-        <h1>Login</h1>
-     <form action="" method="post">
-        <input type="text" name="username" id="input" placeholder="Username" required>
-        <input type="password" name="password" id="input" placeholder="Password" required minlength="6">
-        <input type="submit" value="Login">
-     </form>
-     <a href="#">Register With Us!</a>
-    </div>
+    <div class="ds">
+    
+       <h1>Create Your Account !</h1>
 
-  </div>  
+       <form action="log\reg.php" method="post" enctype="multipart/form-data">
+       
+           <div id="name">    
+              <input type="text" name="firstName" placeholder="First Name" required><br>
+              <input type="text" name="lastName" placeholder="Last Name" required><br>
+           </div>
+
+             
+            <input type="text" name="username" placeholder="Username" required><br>
+
+             
+            <input type="email" name="email" placeholder="Email" required><br>
+
+            
+            <input type="text" name="address" placeholder="Address" required  > <br>
+
+             
+            <input type="text" name="contactNo" placeholder="Contact No" maxlength="10" minlength="10" required><br>
+
+             
+            <input type="password" name="password" placeholder="Password" minlength="6" required><br>
+
+            <label for="userImage">Select Image</label>
+            <input type="file" name="userImage" accept="image/*" required><br>
+
+            <input type="submit" value="Register">
+       </form>
+    </div>
+</div>
 
 
 <app-footer></app-footer>
