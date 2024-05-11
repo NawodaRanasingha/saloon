@@ -2,6 +2,7 @@
 .dash-ul {
     background-color:  #012345;
     width: auto;
+    height:65px;
     margin-left: 0;
     list-style-type: none;
     border-radius: 5px;
@@ -17,7 +18,7 @@
     text-align: center;
     padding: 0px 2px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
 .dash-list1 {
     float: right;
@@ -26,8 +27,9 @@
 .dash-img {
     margin-left: 30px;
     text-align: center;
-    width: 40px;
+    width: 35px;
     padding: 20px 0px;
+   
 }
 
 
@@ -37,7 +39,7 @@
 
 nav{
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: transparent;
     background-color: #012345;
     /* background: rgba(0, 0, 0, 0.5); */
@@ -67,6 +69,7 @@ nav ul li a{
     text-decoration: none;
     color: white;
     /* background-color: green; */
+    
 }
 nav ul li a.active{
     border-bottom: 4px solid white;
@@ -80,9 +83,48 @@ nav ul li a.active{
     margin-left: 90px;
 }
 
+
+.nameTag h1{
+    color: white;
+    padding-left: 10px;
+    cursor: none;
+}
+
+.search{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+
+ .search input{
+  width: 350px;
+  height: 30px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  outline: none;
+  border:1px solid white;
+  background: transparent;
+  padding-left: 15px;
+  color: white;
+}
+.search button{
+    height: 30px;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #012345;
+    font-weight: bold;
+    margin-left: 3px;
+    width: 40px;
+    position: relative;
+    top: -4px;
+}
+
 .search button img{
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 25px;
     /* background-color: red; */
     position: absolute;
     top:1px;
