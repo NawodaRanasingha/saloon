@@ -99,6 +99,7 @@ body{
     /* background-color: red; */
     border-top-left-radius: 100px;
     color: white;
+    margin-top: 20px;
   }
   .lg form{
     display: flex;
@@ -149,6 +150,7 @@ body{
     justify-content: center;
     align-items: center;
     background:rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
   }
   .ds form{
     /* background-color: yellow; */
@@ -217,3 +219,10 @@ body{
     color: darkorange;
     margin-top: 5px;
    }
+   .background {
+    background-image: url("../../../assets/other/log.jpg"); /* Adjust the path according to your folder structure */
+    background-size: cover; /* Adjust as needed */
+    /* Add any other background properties like position, repeat, etc. */
+    width: auto;
+    background-position: center;
+    height: 100vh; }

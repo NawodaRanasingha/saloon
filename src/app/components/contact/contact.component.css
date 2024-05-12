@@ -58,6 +58,8 @@
   .lg h2{
     margin: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    
   }
   .lg p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -72,6 +74,8 @@
     justify-content: center;
     align-items: center;
     background:rgba(0, 0, 0, 0.7);
+    border-top-left-radius: 100px;
+    margin-top: 90px;
   
   }
   .ds form{
@@ -127,6 +131,7 @@
     outline: none;
   }
   .ds h1{
+    font-size: 25px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -142,3 +147,13 @@
     color: darkorange;
     margin-top: 5px;
    }
+  
+
+.background {
+  background-image: url("../../../assets/other/contact.jpeg"); /* Adjust the path according to your folder structure */
+  background-size: cover; /* Adjust as needed */
+  /* Add any other background properties like position, repeat, etc. */
+  width: auto;
+  background-position: center;
+  height: 100vh; 
+}
