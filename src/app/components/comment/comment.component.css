@@ -1,7 +1,0 @@
-.background {
-    background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    /* Optionally, you can add other background properties like position, repeat, etc. */
-}
