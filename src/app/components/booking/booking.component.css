@@ -71,7 +71,7 @@
     flex-direction: column;
    
     width: 500px;
-    justify-content: center;
+  
     align-items: center;
     background:rgba(82, 114, 98, 0.7);
    
@@ -162,3 +162,18 @@
   background-position: center;
   height: 100vh; 
 }
+
+
+.booking-container button {
+    background-color: blue;
+    color: white; /* To ensure text is readable on the blue background */
+    border: none; /* Remove border for a cleaner look */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  .booking-container button:hover {
+    background-color: darkblue; /* Change color on hover */
+  }
+  
