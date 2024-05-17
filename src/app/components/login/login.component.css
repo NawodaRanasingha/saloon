@@ -220,7 +220,7 @@ body{
     margin-top: 5px;
    }
    .background {
-    background-image: url("../../../assets/other/log.jpg"); /* Adjust the path according to your folder structure */
+    background-image: url("../../../assets/other/pexels-gabby-k-6621224.jpg"); /* Adjust the path according to your folder structure */
     background-size: cover; /* Adjust as needed */
     /* Add any other background properties like position, repeat, etc. */
     width: auto;
