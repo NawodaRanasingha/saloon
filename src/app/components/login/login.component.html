@@ -23,32 +23,23 @@
     
        <h1>Create Your Account </h1>
 
-       <form action="log\reg.php" method="post" enctype="multipart/form-data">
+       <form  method="post" enctype="multipart/form-data">
        
-           <div id="name">    
-              <input type="text" name="firstName" placeholder="First Name" required><br>
-              <input type="text" name="lastName" placeholder="Last Name" required><br>
+           <div id="name"> 
+               
+              <input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" name="firstName" placeholder="First Name" required><br>
+              <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}" name="lastName" placeholder="Last Name" required><br>
            </div>
-
-             
-            <input type="text" name="username" placeholder="Username" required><br>
-
-             
-            <input type="email" name="email" placeholder="Email" required><br>
-
-            
-            <input type="text" name="address" placeholder="Address" required  > <br>
-
-             
-            <input type="text" name="contactNo" placeholder="Contact No" maxlength="10" minlength="10" required><br>
-
-             
-            <input type="password" name="password" placeholder="Password" minlength="6" required><br>
-
+            <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" name="username" placeholder="Username" required><br>
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email" placeholder="Email" required><br>
+            <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" name="address" placeholder="Address" required  > <br>
+            <input type="text" [(ngModel)]="contactNo" [ngModelOptions]="{standalone: true}"name="contactNo" placeholder="Contact No" maxlength="10" minlength="10" required><br> 
+            <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" name="password" placeholder="Password" minlength="6" required><br>
             <label for="userImage">Select Image</label>
-            <input type="file" name="userImage" accept="image/*" required><br>
+            <input type="file"  accept="image/*" ><br>
+            
 
-            <input type="submit" value="Register">
+            <input type="submit" value="Register" (click)="register()" >
        </form>
     </div>
 </div>
