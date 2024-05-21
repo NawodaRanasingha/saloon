@@ -13,11 +13,12 @@ import { AdminComponent } from './mudules/admin/admin.component';
 import { AccountComponent } from './mudules/admin/components/account/account.component';
 import { ViewAppointmentsComponent } from './mudules/admin/components/view-appointments/view-appointments.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { LoginComponent } from './components/login/login.component';
+ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     AccountComponent,
     ViewAppointmentsComponent,
     ContactComponent,
-    LoginComponent,
+     LoginComponent,
     FooterComponent,
    
   ],
@@ -40,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [
     provideClientHydration()

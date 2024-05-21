@@ -24,25 +24,72 @@
        <h1>Create Your Account </h1>
 
        <form  method="post" enctype="multipart/form-data">
-       
-           <div id="name"> 
-               
-              <input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" name="firstName" placeholder="First Name" required><br>
-              <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}" name="lastName" placeholder="Last Name" required><br>
-           </div>
-            <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" name="username" placeholder="Username" required><br>
-            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email" placeholder="Email" required><br>
-            <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" name="address" placeholder="Address" required  > <br>
-            <input type="text" [(ngModel)]="contactNo" [ngModelOptions]="{standalone: true}"name="contactNo" placeholder="Contact No" maxlength="10" minlength="10" required><br> 
-            <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone: true}" name="password" placeholder="Password" minlength="6" required><br>
+              <mat-form-field class="reg-form-field">
+               <mat-label >First Name</mat-label>
+               <textarea matInput placeholder="First Name" formControlName="First_Name"></textarea>
+               <!-- <input  matInput type="text"> -->
+             </mat-form-field><br>
+
+
+             <mat-form-field class="reg-form-field">
+               <mat-label >Last Name</mat-label>
+               <textarea matInput placeholder="Last Name" formControlName="Last_Name"></textarea>
+               <!-- <input  matInput type="text"> -->
+             </mat-form-field><br>
+
+
+             <mat-form-field class="reg-form-field">
+               <mat-label >Username</mat-label>
+               <textarea matInput placeholder="First Name" formControlName="Username"></textarea>
+               <!-- <input  matInput type="text"> -->
+             </mat-form-field><br>
+
+
+             <mat-form-field class="reg-form-field">
+               <mat-label >Address</mat-label>
+               <textarea matInput placeholder="Address" formControlName="Address"></textarea>
+               <!-- <input  matInput type="text"> -->
+             </mat-form-field><br>
+
+
+             <mat-form-field class="reg-full-width">
+               <mat-label>Email</mat-label>
+               <input type="email" matInput [formControl]="emailFormControl"  placeholder="Ex. pat@example.com">
+               @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                 <mat-error>Please enter a valid email address</mat-error>
+               }
+               @if (emailFormControl.hasError('required')) {
+                 <mat-error>Email is <strong>required</strong></mat-error>
+               }
+             </mat-form-field><br>
+
+               <mat-form-field class="reg-full-width">
+                           <mat-label>Contact</mat-label>
+                           <span matTextPrefix>+94 &nbsp;</span>
+                           <input formControlName="contact" type="tel" matInput placeholder="XXX XXX XXXX">
+                           </mat-form-field><br>
+
+
+               <mat-form-field class="reg-form-field">
+                              <mat-label>Password</mat-label>
+                                  <input formControlName="password" matInput type="password">
+                              </mat-form-field><br>
+          
             <label for="userImage">Select Image</label>
             <input type="file"  accept="image/*" ><br>
             
 
-            <input type="submit" value="Register" (click)="register()" >
-       </form>
-    </div>
-</div>
+            
+            <button mat-flat-button>Register</button>
+            
+      </form>
+      </div>
+   
 </div>
 
+
 <app-footer></app-footer>
+
+
+
+

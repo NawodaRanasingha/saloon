@@ -4,7 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { LoginComponent } from './components/login/login.component';
+ import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
