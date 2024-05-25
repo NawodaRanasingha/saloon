@@ -19,7 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; // Import ReactiveFormsModule
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { registerComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ContactComponent,
      LoginComponent,
     FooterComponent,
+    registerComponent,
    
   ],
   imports: [
@@ -43,7 +47,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [
     provideClientHydration()

@@ -5,7 +5,7 @@ import { BookingComponent } from './components/booking/booking.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
  import { LoginComponent } from './components/login/login.component';
-
+import { registerComponent } from './components/register/register.component';
 
 const routes: Routes = [
 
@@ -14,7 +14,8 @@ const routes: Routes = [
 {path: 'contactus',component: ContactComponent},
 {path: 'appointment', component: BookingComponent},
 {path: 'aboutus', component: AboutComponent},
-{path: 'login',component:LoginComponent}
+{path: 'login',component:LoginComponent},
+{path : 'register',component:registerComponent},
 
  ];
 

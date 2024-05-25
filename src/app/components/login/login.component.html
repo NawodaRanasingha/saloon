@@ -1,95 +1,35 @@
 <app-navbar></app-navbar>
-  
+
 <div class="background">
   <div class="frm">
-     
-    <div class="lg"> 
-        <img src="../../../assets/img/logo/logoo.jpg" alt="Logo" width="150">
-         <h2>Login</h2>
-         <p>I have an already created account</p>
+    <div class="lg">
+      <img src="../../../assets/img/logo/logoo.jpg" alt="Logo" width="150">
+      <h2>Login</h2>
+      <p>I have an already created account</p>
 
-         <label class="errMsg">
-          
-      </label>
+      <label class="errMsg"></label>
 
-         <form action="" method="post">
-            <input type="text" name="username" id="uname" placeholder="Username" required>
-            <input type="password" name="password" id="pswd" placeholder="Password" required>
-            <input type="submit" value="Login">
-         </form>
-    </div>
-
-    <div class="ds">
-    
-       <h1>Create Your Account </h1>
-
-       <form  method="post" enctype="multipart/form-data">
-              <mat-form-field class="reg-form-field">
-               <mat-label >First Name</mat-label>
-               <textarea matInput placeholder="First Name" formControlName="First_Name"></textarea>
-               <!-- <input  matInput type="text"> -->
-             </mat-form-field><br>
-
-
-             <mat-form-field class="reg-form-field">
-               <mat-label >Last Name</mat-label>
-               <textarea matInput placeholder="Last Name" formControlName="Last_Name"></textarea>
-               <!-- <input  matInput type="text"> -->
-             </mat-form-field><br>
-
-
-             <mat-form-field class="reg-form-field">
-               <mat-label >Username</mat-label>
-               <textarea matInput placeholder="First Name" formControlName="Username"></textarea>
-               <!-- <input  matInput type="text"> -->
-             </mat-form-field><br>
-
-
-             <mat-form-field class="reg-form-field">
-               <mat-label >Address</mat-label>
-               <textarea matInput placeholder="Address" formControlName="Address"></textarea>
-               <!-- <input  matInput type="text"> -->
-             </mat-form-field><br>
-
-
-             <mat-form-field class="reg-full-width">
-               <mat-label>Email</mat-label>
-               <input type="email" matInput [formControl]="emailFormControl"  placeholder="Ex. pat@example.com">
-               @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                 <mat-error>Please enter a valid email address</mat-error>
-               }
-               @if (emailFormControl.hasError('required')) {
-                 <mat-error>Email is <strong>required</strong></mat-error>
-               }
-             </mat-form-field><br>
-
-               <mat-form-field class="reg-full-width">
-                           <mat-label>Contact</mat-label>
-                           <span matTextPrefix>+94 &nbsp;</span>
-                           <input formControlName="contact" type="tel" matInput placeholder="XXX XXX XXXX">
-                           </mat-form-field><br>
-
-
-               <mat-form-field class="reg-form-field">
-                              <mat-label>Password</mat-label>
-                                  <input formControlName="password" matInput type="password">
-                              </mat-form-field><br>
-          
-            <label for="userImage">Select Image</label>
-            <input type="file"  accept="image/*" ><br>
-            
-
-            
-            <button mat-flat-button>Register</button>
-            
+      <form [formGroup]="login_form" (submit)="loginsubmit()">
+        <mat-form-field class="reg-form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="reg-form-field">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password">
+        </mat-form-field>
+        <br>
+        <button mat-flat-button>Login</button>
       </form>
-      </div>
+    </div>
+    
+    
+       
+        
+        
    
-</div>
-
-
-<app-footer></app-footer>
-
-
-
+  </div>
+  <br><br><br>
+  <app-footer></app-footer>
 

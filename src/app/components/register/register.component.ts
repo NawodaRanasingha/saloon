@@ -6,6 +6,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { error } from 'console';
 import { NgToastService } from 'ng-angular-popup';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 import {MatSelectModule} from '@angular/material/select';
 
@@ -17,18 +20,18 @@ import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 
 })
-export class LoginComponent implements OnInit {
+export class registerComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
 
   pending: any;
 
+  form: FormGroup        //for assign register data
  
-  login_form: FormGroup;  //for assign login data
 
 
   constructor(
@@ -39,16 +42,29 @@ export class LoginComponent implements OnInit {
     private Toast: NgToastService,
    
   ) {
-    
+    //register form part
+
+    this.form = this.formbuilder.group({
       
-//    login part
+      contact: ['', [Validators.required, Validators.pattern("^((\\+94-?)|0)?[0-9]{9}$")]],
+      email: "",
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[$@$!%?&])[A-Za-z\d$@$!%?&].{8,}')
+        ]
+      ],
 
-this.login_form = this.formbuilder.group({
+      First_Name:'',
+      Last_Name: '',
+      userRole: "user",
+      Address: ['',Validators.required]
+      
+    })
 
-  email:'',
-  password: '',
 
-})
+
   }
 
   ngOnInit(): void {
@@ -78,7 +94,7 @@ this.login_form = this.formbuilder.group({
   }
 
   submit(): void {
-    let user = this.login_form.getRawValue()
+    let user = this.form.getRawValue()
     user.email = this.emailFormControl.value;
 
     console.log(user);
@@ -99,21 +115,16 @@ this.login_form = this.formbuilder.group({
                 horizontalPosition: 'center'
               })
             })
-       this.Toast.success({ detail: "Thank you!!!", summary: 'Your registration is sent please wait for admin approve', duration: 9000, position: 'botomCenter' })
-   
+      
+
+    
+    
   }
 
 
 
 
-  //login part
-  loginsubmit():void{
-    let loginuser = this.login_form.getRawValue()
-     loginuser.email = this.emailFormControl.value;
-
-    console.log(loginuser);
-
-  }
+ 
 
 
 }
