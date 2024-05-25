@@ -6,15 +6,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { error } from 'console';
 import { NgToastService } from 'ng-angular-popup';
 
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 
-import {MatSelectModule} from '@angular/material/select';
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -28,7 +21,6 @@ export class registerComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
 
-  pending: any;
 
   form: FormGroup        //for assign register data
  
@@ -46,13 +38,12 @@ export class registerComponent implements OnInit {
 
     this.form = this.formbuilder.group({
       
-      contact: ['', [Validators.required, Validators.pattern("^((\\+94-?)|0)?[0-9]{9}$")]],
+      contact: ['',Validators.required],
       email: "",
       password: [
         '',
         [
           Validators.required,
-          Validators.pattern('(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[$@$!%?&])[A-Za-z\d$@$!%?&].{8,}')
         ]
       ],
 
