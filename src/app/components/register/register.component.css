@@ -15,12 +15,12 @@ body{
     box-shadow: 5px 5px 10px #888888;
     /* background-color: brown; */
 }
-.main .img  img{
+/*.main .img  img{
    min-height: 90vh; 
   height: 90vh;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px; 
-}
+}*/
 
 
 .form{
@@ -75,25 +75,28 @@ body{
 }
 .frm{
     display: flex;
-    margin-top: 40px;
+    margin-top: 6px;
     /* background:rgba(0, 0, 0, 0.7); */
-    width: 1000px;
+    width: 900px;
     height: 500px;
     position: relative;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    margin-left: 15%;
+    margin-left: 10%;
   }
   .ds{
     display: flex;
     flex-direction: column;
     border-bottom-right-radius: 100px;
-    width: 500px;
+    width: 1500px;
     justify-content: center;
     align-items: center;
-    background:rgba(0, 0, 0, 0.7);
-    margin-top: 20px;
-
+    background:rgba(255, 161, 201, 0.7);
+    margin-top: 10px;
+    margin-left: 95px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px; 
+    border-top-left-radius: 100px;
     
   }
   .ds form{
@@ -165,9 +168,39 @@ body{
     margin-top: 5px;
    }
    .background {
-    background-image: url("../../../assets/other/pexels-gabby-k-6621224.jpg"); /* Adjust the path according to your folder structure */
+    background-image: url("../../../assets/other/cdd.jpg"); /* Adjust the path according to your folder structure */
     background-size: cover; /* Adjust as needed */
     /* Add any other background properties like position, repeat, etc. */
     width: auto;
     background-position: center;
-    height: 100vh; }
+    height: 100vh;
+  margin-top: 0%;
+  
+  }
+
+    example-form{
+flex-direction: column;
+
+
+    }
+    .form-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.reg-form-field {
+  width: 100%;
+}
+
+button {
+  grid-column: span 2;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.full-screen-image {
+  width: auto;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
