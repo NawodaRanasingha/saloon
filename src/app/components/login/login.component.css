@@ -15,12 +15,6 @@ body{
     box-shadow: 5px 5px 10px #888888;
     /* background-color: brown; */
 }
-.main .img  img{
-   min-height: 90vh; 
-  height: 90vh;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px; 
-}
 
 
 .form{
@@ -32,7 +26,7 @@ body{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px; 
     /* background-color: azure; */
-   
+   align-self: center;
 }
 .form a{
     text-decoration: none;
@@ -49,7 +43,7 @@ body{
     padding-left: 10px;
     width: 300px;
     height: 30px;
-    background-color: white;
+    background-color: #E60965;;
     border: 1px solid lightseagreen;
     border-radius: 5px;
 }
@@ -75,7 +69,7 @@ body{
 }
 .frm{
     display: flex;
-    margin-top: 6px;
+    margin-top: 46px;
     /* background:rgba(0, 0, 0, 0.7); */
     width: 1000px;
     height: 500px;
@@ -87,16 +81,17 @@ body{
 
   /***************Login****************/
   .lg{
-    background:rgba(0, 0, 0, 0.5);
+    background:rgba(255, 161, 201, 0.7);
     display: flex;
     width: 500px;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
     /* background-color: red; */
-    border-top-left-radius: 100px;
+   
     color: white;
     margin-top: 20px;
+    margin-left: 20%;
   }
   .lg form{
     display: flex;
@@ -136,7 +131,8 @@ body{
   }
   .lg p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 58, 255);
+    color:#E60965;
+    font-size: 20px;
   }
   /********************register************************ */
   .ds{
@@ -220,9 +216,15 @@ body{
     margin-top: 5px;
    }
    .background {
-    background-image: url("../../../assets/other/pexels-gabby-k-6621224.jpg"); /* Adjust the path according to your folder structure */
+    background-image: url("../../../assets/other/DIY_\ Fresh\ Flower\ Wall.jpg"); /* Adjust the path according to your folder structure */
     background-size: cover; /* Adjust as needed */
     /* Add any other background properties like position, repeat, etc. */
     width: auto;
     background-position: center;
-    height: 100vh; }
+   /* height: 100%;*/
+    width: 100%; /* Ensures the container takes the full width of the viewport */
+    height: 100vh; /* Sets the container height to the full height of the viewport */
+    overflow: hidden;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+  }

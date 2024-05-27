@@ -82,7 +82,7 @@ body{
     position: relative;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    margin-left: 10%;
+    margin-left: 15%;
   }
   .ds{
     display: flex;
