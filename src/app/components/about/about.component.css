@@ -9,6 +9,7 @@
     display: table;
     clear: both;
   }
+
   * {
     box-sizing: border-box;
   }
@@ -21,48 +22,72 @@
   }
   
   .left{
-   width: 28%;
+   width: 50%;
   }
   
-  .middle {
-    width: 70%;
-  }
+ 
   .right {
-    width: 2%;
+    width: 50%;
+    height: 100vh;
   }
   
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
+
+
   /* ************************ */
   .container {
     position: relative;
     text-align: center;
-    color: black;
+    color:white;
     font-size:50px;
+    height: 100hv;
   }
   
   .containerr {
     position: relative;
     text-align: left;
-    color: black;
+    color: white;
     font-size:60px;
   }
   
-  .centered {
+  /* .centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
   
-  .top-left{
+  /* .top-left{
   position:absolute;
   top:8px;
   left:16px;
   text-align:center;
+  } */
+
+  .paragraph {
+    width: 100px;
+    transition: width 2s;
+    background:rgba(255, 161, 201, 0.7);
+  }
+  
+  /* Specific timing functions */
+  #paragraph1 { transition-timing-function: linear; }
+  #paragraph2 { transition-timing-function: ease; }
+  #paragraph3 { transition-timing-function: ease-in; }
+  #paragraph4 { transition-timing-function: ease-out; }
+  #paragraph5 { transition-timing-function: ease-in-out; }
+  
+  .paragraph:hover {
+    width: 700px;
+  }
+
+  h1{
+
+color: white;
+    
+  }
+  p{
+
+text-align: center;
+color: black;
   }
