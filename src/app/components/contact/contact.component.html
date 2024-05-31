@@ -19,7 +19,7 @@
        
       
 
-    <form (ngSubmit)="onSubmit(commentForm)" #commentForm="ngForm">
+    <form [formGroup]="  comment_form" (submit)="loginsubmit()">
       <mat-form-field class="reg-form-field">
         <mat-label>Email</mat-label>
         <input matInput placeholder="Email" formControlName="email">
@@ -31,7 +31,7 @@
       </mat-form-field>
       <br>
      
-      <button mat-raised-button type="submit" [disabled]="!commentForm.valid">Submit</button><br>
+      <button mat-raised-button type="submit" [disabled]="!  comment_form.valid">Submit</button><br>
     </form>
   
     </div>

@@ -124,4 +124,29 @@
   .booking-container button:hover {
     background-color: darkblue; /* Change color on hover */
   }
+  /* boking feiled*/
+  
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .appointment-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .appointment-form mat-form-field {
+    p
+  }
   

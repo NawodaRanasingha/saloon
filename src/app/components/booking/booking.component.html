@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+ <app-navbar></app-navbar>
 
 <div class="background">
 
@@ -6,22 +6,55 @@
 <div class="frm">
     
     <div class="ds">
-<br><br>
-        <img src="../../../assets/img/logo/logoo.jpg" alt="Logo" width="150"><br>
+<br>
+        <img src="../../../assets/img/logo/logoo.jpg" alt="Logo" width="100"><br>
         <div class="booking-container">
-            <h2>Book Your Appointment</h2><br><br>
-            <form (ngSubmit)="submitBooking()">
-              <div class="form-group">
+            <h2>Book Your Appointment</h2>
+
+
+            
+              <form [formGroup]="Appinment_form" (submit)="submitBooking()">
+              
+                <mat-form-field class="example-full-width">
+                  <mat-label>Your Name</mat-label>
+                  <input matInput placeholder="Your Name" value="Your Name" height="50px">
+                </mat-form-field>
+              
                 
-                <input type="text" name="username" placeholder="your name" required><br>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Email" required><br>
-              </div>
+                <mat-form-field>
+                  <mat-label>Select Service</mat-label>
+                  <mat-select>
+                    <mat-option value="one">Waxing</mat-option>
+                    <mat-option value="two">Nail Services</mat-option>
+                    <mat-option value="two">Hair Services</mat-option>
+                    <mat-option value="two">Facials</mat-option>
+                    <mat-option value="two">Makeup</mat-option>
+                  </mat-select>
+                </mat-form-field>
               
 
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Date</mat-label>
+                  <input matInput [matDatepicker]="picker" formControlName="date">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
                 
-                <label for="date">Preferred Date:</label>
+
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Select Time</mat-label>
+                  <input matInput [ngxTimepicker]="timepicker" readonly formControlName="time">
+                  <ngx-material-timepicker #timepicker></ngx-material-timepicker>
+                </mat-form-field>
+
+
+
+                <button mat-raised-button type="submit" [disabled]="!  Appinment_form.valid">Submit</button><br>
+              </form>
+
+ <!-- <label for="date">Preferred Date:</label>
                 <input type="date" id="date" name="date" >
              <br><br>
               <div class="form-group">
@@ -29,15 +62,9 @@
                 <button type="submit">Submit Booking</button></div>
                 <br><br><br>
               </div>
-            </form>
-          </div>
-     
-
-
-
-    </div>
-</div>
-
-</div>
-
-<app-footer></app-footer>
+                
+                -->
+           </div> 
+           </div>
+           </div>
+ <app-footer></app-footer>

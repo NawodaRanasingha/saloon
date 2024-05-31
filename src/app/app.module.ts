@@ -27,6 +27,21 @@ import { registerComponent } from './components/register/register.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
+
+
+
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+
+
+
+
 
 
 
@@ -63,11 +78,15 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatCardModule,
     MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    NgxMaterialTimepickerModule
    
   ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

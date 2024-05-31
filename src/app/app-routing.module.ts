@@ -6,6 +6,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
  import { LoginComponent } from './components/login/login.component';
 import { registerComponent } from './components/register/register.component';
+import { AdminComponent } from './mudules/admin/admin.component';
+import { DashboardComponent } from './mudules/admin/components/dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
 
@@ -15,7 +17,14 @@ const routes: Routes = [
 {path: 'appointment', component: BookingComponent},
 {path: 'aboutus', component: AboutComponent},
 {path: 'login',component:LoginComponent},
-{path : 'register',component:registerComponent},
+{path : 'register',component:registerComponent},{
+  path : 'admin', component: AdminComponent, children:[
+    { path:'',redirectTo:'/admin/dashboard',pathMatch:'full'},
+    {path: "dashboard",component :DashboardComponent},
+
+    
+  ]
+}
 
  ];
 

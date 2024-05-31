@@ -3,15 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormsModule, ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { error } from 'console';
-import { NgToastService } from 'ng-angular-popup';
 
-
-import {MatSelectModule} from '@angular/material/select';
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -25,9 +17,7 @@ export class LoginComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
 
-  pending: any;
 
- 
   login_form: FormGroup;  //for assign login data
 
 
@@ -36,7 +26,7 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private snackBar: MatSnackBar,
-    private Toast: NgToastService,
+
    
   ) {
     
@@ -77,43 +67,43 @@ this.login_form = this.formbuilder.group({
     }
   }
 
-  submit(): void {
-    let user = this.login_form.getRawValue()
-    user.email = this.emailFormControl.value;
 
-    console.log(user);
-    this.http.post("http://localhost:5000/api/register", user, {
-          withCredentials: true
+
+
+  loginsubmit(): void {
+    if (this.login_form.invalid) {
+      this.snackBar.open("Please fill or enter valid details", 'Close', {
+        duration: 3000,
+        verticalPosition: 'bottom',
+        horizontalPosition: 'center'
+      })
+      return;
+    }
+  
+    let user = this.login_form.getRawValue();
+    console.log('Submitting login data:', user); // Log the data being sent
+  
+    this.http.post("http://localhost:5000/api/user/login", user, {
+      withCredentials: true
+    }).subscribe(
+      (res: any) => {
+        console.log('Login response:', res); // Log the response
+        if (res.userRole === "admin") {
+          this.router.navigate(['/admin']);
+        } else if (res.userRole === "user") {
+          this.router.navigate(['/']);
+        }
+      },
+      (err) => {
+        console.error('Login error:', err); // Log the error
+        this.snackBar.open(err.error.message, 'Close', {
+          duration: 3000,
+          verticalPosition: 'bottom',
+          horizontalPosition: 'center'
         })
-          .subscribe(() => {
-            this.Toast.success({ detail: "Thank you!!!", summary: 'Your registration is sent please wait for admin approve', duration: 9000, position: 'botomCenter' })
-            this.router.navigate(['/']);
-  
-            // swal('Hello world!')
-  
-          },
-            (err) => {
-              this.snackBar.open(err.error.message, 'Close', {
-                duration: 3000,
-                verticalPosition: 'bottom',
-                horizontalPosition: 'center'
-              })
-            })
-       this.Toast.success({ detail: "Thank you!!!", summary: 'Your registration is sent please wait for admin approve', duration: 9000, position: 'botomCenter' })
-   
+      }
+    );
   }
-
-
-
-
-  //login part
-  loginsubmit():void{
-    let loginuser = this.login_form.getRawValue()
-     loginuser.email = this.emailFormControl.value;
-
-    console.log(loginuser);
-
-  }
-
+  
 
 }
