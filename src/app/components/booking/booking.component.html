@@ -1,7 +1,7 @@
  <app-navbar></app-navbar>
 
 <div class="background">
-
+  <br><br>
 
 <div class="frm">
     
@@ -12,16 +12,15 @@
             <h2>Book Your Appointment</h2>
 
 
-            
+
               <form [formGroup]="Appinment_form" (submit)="submitBooking()">
-              
+
+
                 <mat-form-field class="example-full-width">
                   <mat-label>Your Name</mat-label>
-                  <input matInput placeholder="Your Name" value="Your Name" height="50px">
+                  <input matInput placeholder="Your Name" value="Your Name">
                 </mat-form-field>
-              
-                
-                <mat-form-field>
+                  <mat-form-field class="example-full-width">
                   <mat-label>Select Service</mat-label>
                   <mat-select>
                     <mat-option value="one">Waxing</mat-option>
@@ -32,8 +31,7 @@
                   </mat-select>
                 </mat-form-field>
               
-
-
+      
                 <mat-form-field appearance="fill">
                   <mat-label>Select Date</mat-label>
                   <input matInput [matDatepicker]="picker" formControlName="date">
@@ -42,18 +40,15 @@
                 </mat-form-field>
                 
 
-
+               
                 <mat-form-field appearance="fill">
                   <mat-label>Select Time</mat-label>
                   <input matInput [ngxTimepicker]="timepicker" readonly formControlName="time">
                   <ngx-material-timepicker #timepicker></ngx-material-timepicker>
                 </mat-form-field>
-
-
-
                 <button mat-raised-button type="submit" [disabled]="!  Appinment_form.valid">Submit</button><br>
               </form>
-
+            
  <!-- <label for="date">Preferred Date:</label>
                 <input type="date" id="date" name="date" >
              <br><br>
@@ -67,4 +62,8 @@
            </div> 
            </div>
            </div>
- <app-footer></app-footer>
+
+
+
+</div>
+<app-footer></app-footer>
