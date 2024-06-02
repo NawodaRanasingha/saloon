@@ -1,0 +1,38 @@
+.main-container {
+    display: flex;
+  }
+  
+  .dashboard {
+    flex: 1;
+    max-width: 300px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .content {
+    flex: 3;
+    padding: 10px;
+  }
+  
+  .container {
+    margin: 0;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .table th, .table td {
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: blue;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: red;
+    color: white;
+  }
+  

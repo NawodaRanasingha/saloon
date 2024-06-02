@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div class="dashboard">
+      <app-dashboard></app-dashboard>
+    </div>
+    <div class="content">
+      <div class="container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.userId }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.position }}</td>
+              <td>
+                <button (click)="editUser(user)" class="btn btn-primary">Edit</button>
+                <button (click)="deleteUser(user.userId)" class="btn btn-danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

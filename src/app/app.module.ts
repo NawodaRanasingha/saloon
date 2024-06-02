@@ -40,6 +40,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
+import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.component';
 
 
 
@@ -68,6 +69,7 @@ import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments
     DashboardComponent,
     
     ManageAppointmentsComponent,
+          ManageUsersComponent,
   ],
   imports: [
     BrowserModule,
