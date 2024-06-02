@@ -4,28 +4,38 @@
   </div>
   <div class="content">
     <div class="container">
-    <table class="table table-bordered" border="1">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Service</th>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let appointment of appointments">
-          <td>{{ appointment.name }}</td>
-          <td>{{ appointment.service }}</td>
-          <td>{{ appointment.date }}</td>
-          <td>{{ appointment.time }}</td>
-          <td>
-            <button (click)="editAppointment(appointment)" class="btn btn-primary">Edit</button>
-            <button (click)="deleteAppointment(appointment.userId)" class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table table-bordered" border="1">
+        
+        <thead>
+             <!-- New Row with Center-Aligned Content and Pink Background -->
+             <tr class="new-row">
+              <td colspan="6">Manage Appointments</td>
+            </tr>
+            <!-- Existing Rows -->
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Service</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+          <tr *ngFor="let appointment of appointments">
+            <td>{{ appointment.userId }}</td>
+            <td>{{ appointment.name }}</td>
+            <td>{{ appointment.service }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+            <td>
+              <button (click)="editAppointment(appointment)" class="btn btn-primary">Edit</button>
+              <button (click)="deleteAppointment(appointment.userId)" class="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  
+</div>
