@@ -31,13 +31,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
-
+import { DashboardComponent } from './mudules/admin/components/dashboard/dashboard/dashboard.component';
 
 
 
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+
+import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
 
 
 
@@ -63,6 +65,9 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
      LoginComponent,
     FooterComponent,
     registerComponent,
+    DashboardComponent,
+    
+    ManageAppointmentsComponent,
   ],
   imports: [
     BrowserModule,
