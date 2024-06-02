@@ -35,4 +35,63 @@
     background-color: red;
     color: white;
   }
+
+
+  .main-container {
+    display: flex;
+  }
+  
+  .dashboard {
+    flex: 1;
+    /* Adjust width as needed */
+    max-width: 300px;
+    padding: 10px;
+    border-right: 1px solid #ccc; /* Optional: to visually separate the dashboard */
+  }
+  
+  .content {
+    flex: 3;
+    padding: 10px;
+  }
+  
+  .container {
+    margin: 0;
+  }
+  
+  .table {
+    width: 100%;
+  }
+
+  .main-container {
+    display: flex;
+  }
+  
+  .dashboard {
+    flex: 1;
+    max-width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    border-right: 1px solid #ccc; /* Optional: to visually separate the dashboard */
+  }
+  
+  .content {
+    flex: 3;
+    padding: 10px;
+  }
+  
+  .container {
+    margin: 0;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .new-row {
+    background-color: #d82e97;
+    text-align: center; /* Optional: to make the text bold */
+    font-size: 30px;
+    height: 50px;
+  }
+  
+  
   

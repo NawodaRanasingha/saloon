@@ -9,6 +9,7 @@ import { registerComponent } from './components/register/register.component';
 import { AdminComponent } from './mudules/admin/admin.component';
 import { DashboardComponent } from './mudules/admin/components/dashboard/dashboard/dashboard.component';
 import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
+import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.component';
 
 const routes: Routes = [
 
@@ -34,6 +35,11 @@ const routes: Routes = [
   ]},
 
 
+  {path : 'admin', component: AdminComponent, children:[
+    { path:'',redirectTo:'/admin/manageusers',pathMatch:'full'},
+    {path: "manageusers",component :ManageUsersComponent}, 
+      
+    ]},
     
 
 

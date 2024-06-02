@@ -1,23 +1,34 @@
 <div class="main-container">
-    <div class="dashboard">
-      <app-dashboard></app-dashboard>
-    </div>
-    <div class="content">
-      <div class="container">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>User ID</th>
-              <th>Name</th>
-              <th>Position</th>
+  <div class="dashboard">
+    <app-dashboard></app-dashboard>
+  </div>
+  <div class="content">
+    <div class="container">
+      <table class="table table-bordered" border="1">
+        
+        <thead>
+             <!-- New Row with Center-Aligned Content and Pink Background -->
+             <tr class="new-row">
+              <td colspan="6">Manage Users</td>
+            </tr>
+            <!-- Existing Rows -->
+          <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Password</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let user of users">
-              <td>{{ user.userId }}</td>
-              <td>{{ user.name }}</td>
-              <td>{{ user.position }}</td>
+              <td>{{ user.firstName }}</td>
+              <td>{{ user.secondName }}</td>
+              <td>{{ user.address }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.password }}</td>
+             
               <td>
                 <button (click)="editUser(user)" class="btn btn-primary">Edit</button>
                 <button (click)="deleteUser(user.userId)" class="btn btn-danger">Delete</button>
