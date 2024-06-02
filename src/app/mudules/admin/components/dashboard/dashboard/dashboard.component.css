@@ -19,10 +19,13 @@ body {
     padding: 16px;
     text-decoration: none;
   }
+  .slidebar img{
+    align-self: center;
+  }
    
   .sidebar a.active {
     background-color: #d82e97;
-    color: white;
+    color: rgb(12, 10, 10);
   }
   
   .sidebar a:hover:not(.active) {
