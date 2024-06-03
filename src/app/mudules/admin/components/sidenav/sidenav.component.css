@@ -1,6 +1,6 @@
 .sidenav {
     
-    background: #0c6B37;
+    background:white;
     transition: all 0.4s ease;
     position: fixed;
     z-index: 1;
@@ -35,7 +35,7 @@
              margin-left: 20px;
              font-size: 25px;
              font-weight: 550;
-             color: #fff;
+             color:black;
         }
 
         .btn-close {
@@ -142,7 +142,7 @@
     }
 }
 .active {
-    background-color: #ffffffbe;
+    background-color: #F7418F;
     .sidenav-link-icon,
     .sidenav-link-text{
         color: #000;
