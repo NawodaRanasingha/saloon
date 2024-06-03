@@ -42,7 +42,7 @@ export class BookingComponent implements OnInit {
     let appointmentData = this.Appinment_form.getRawValue();
     console.log('Submitting booking data:', appointmentData);
 
-    this.http.post("http://localhost:5000/api/user/comment", appointmentData, {
+    this.http.post("http://localhost:5000/api/user/appoinment", appointmentData, {
       withCredentials: true
     }).subscribe(
       (res: any) => {
