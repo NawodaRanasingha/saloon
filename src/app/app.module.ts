@@ -40,6 +40,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
 import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.component';
+import { SidenavComponent } from './mudules/admin/components/sidenav/sidenav.component';
+import { BodyComponent } from './mudules/admin/components/body/body.component';
 
 
 
@@ -69,6 +71,8 @@ import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.
     
     ManageAppointmentsComponent,
           ManageUsersComponent,
+          SidenavComponent,
+          BodyComponent,
   ],
   imports: [
     BrowserModule,
