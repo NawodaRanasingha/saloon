@@ -8,7 +8,6 @@ import { AboutComponent } from './components/about/about.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { AdminComponent } from './mudules/admin/admin.component';
 import { AccountComponent } from './mudules/admin/components/account/account.component';
 import { ViewAppointmentsComponent } from './mudules/admin/components/view-appointments/view-appointments.component';
@@ -58,7 +57,7 @@ import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.
     BookingComponent,
     ProductsComponent,
     NavbarComponent,
-    SidebarComponent,
+
     AdminComponent,
     AccountComponent,
     ViewAppointmentsComponent,
