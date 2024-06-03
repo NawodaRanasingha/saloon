@@ -1,6 +1,6 @@
 .sidenav {
     
-    background:white;
+    background:#EEEEEE;
     transition: all 0.4s ease;
     position: fixed;
     z-index: 1;
@@ -48,7 +48,7 @@
              border: none;
 
              .fa-times {
-                  color: #fff;
+                  color:black;
                   font-size: 22px;
                   padding-left: 35px;
                   transition:  0.5s ;
@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     height: 3rem;
-    color: #f3f3f3;
+    color: black;
     text-decoration: none;
     border-radius: 0.625rem;
     transition: color .9s ease;
@@ -119,7 +119,7 @@
     transition: color .9s ease;
     border: transparent;
     background-color:  transparent;
-    color: #fff;
+    color: black;
     cursor: pointer;
     font-size: 20px;
 
@@ -130,14 +130,14 @@
     min-width: 50px;
 }
 .logout-func button:hover {
-    background-color: #fff;
+    background-color: #F7418F;
          color: #000;
 }
 
 /*hover in side*/
 .sidenav-nav-item:hover {
     .sidenav-nav-link {
-         background-color: #fff;
+         background-color:#F7418F;
          color: #000;
     }
 }
