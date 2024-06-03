@@ -7,7 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
  import { LoginComponent } from './components/login/login.component';
 import { registerComponent } from './components/register/register.component';
 import { AdminComponent } from './mudules/admin/admin.component';
-import { DashboardComponent } from './mudules/admin/components/dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from './mudules/admin/dashboard/dashboard.component';
 import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
 import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.component';
 
@@ -24,22 +24,13 @@ const routes: Routes = [
 
   {path : 'admin', component: AdminComponent, children:[
     { path:'',redirectTo:'/admin/dashboard',pathMatch:'full'},
-    {path: "dashboard",component :DashboardComponent}, ]},
+    {path: "dashboard",component :DashboardComponent},
+    {path: "manageAppointments",component :ManageAppointmentsComponent},
+    {path: "manageusers",component :ManageUsersComponent}]},
 
 
 
- {path : 'admin', component: AdminComponent, children:[
-  { path:'',redirectTo:'/admin/manageAppointments',pathMatch:'full'},
-  {path: "manageAppointments",component :ManageAppointmentsComponent}, 
-    
-  ]},
 
-
-  {path : 'admin', component: AdminComponent, children:[
-    { path:'',redirectTo:'/admin/manageusers',pathMatch:'full'},
-    {path: "manageusers",component :ManageUsersComponent}, 
-      
-    ]},
     
 
 

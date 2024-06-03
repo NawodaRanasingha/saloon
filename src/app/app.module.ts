@@ -31,7 +31,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
-import { DashboardComponent } from './mudules/admin/components/dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from './mudules/admin/dashboard/dashboard.component';
 
 
 

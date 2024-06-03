@@ -18,16 +18,14 @@
 
                 <mat-form-field class="example-full-width">
                   <mat-label>Your Name</mat-label>
-                  <input matInput placeholder="Your Name" value="Your Name">
+                  <input matInput placeholder="Your Name" value="Your Name" formControlName="name">
                 </mat-form-field>
                   <mat-form-field class="example-full-width">
                   <mat-label>Select Service</mat-label>
-                  <mat-select>
-                    <mat-option value="one">Waxing</mat-option>
-                    <mat-option value="two">Nail Services</mat-option>
-                    <mat-option value="two">Hair Services</mat-option>
-                    <mat-option value="two">Facials</mat-option>
-                    <mat-option value="two">Makeup</mat-option>
+                  <mat-select [(ngModel)]="selectedValue" name="Service" formControlName="service">
+                    @for (service of services; track service) {
+                      <mat-option [value]="service.value">{{service.viewValue}}</mat-option>
+                    }
                   </mat-select>
                 </mat-form-field>
               
@@ -46,7 +44,7 @@
                   <input matInput [ngxTimepicker]="timepicker" readonly formControlName="time">
                   <ngx-material-timepicker #timepicker></ngx-material-timepicker>
                 </mat-form-field>
-                <button mat-raised-button type="submit" [disabled]="!  Appinment_form.valid">Submit</button><br>
+                <button mat-raised-button>Submit</button><br>
               </form>
             
  <!-- <label for="date">Preferred Date:</label>

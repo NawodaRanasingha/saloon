@@ -4,14 +4,29 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+interface Service {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
-
+  selectedValue: String | undefined;
   Appinment_form!: FormGroup;  // Using non-null assertion operator
+  
+  services: Service[] = [
+    {value: 'waxing', viewValue: 'Waxing'},
+    {value: 'nail_services', viewValue: 'Nail Services'},
+    {value: 'hair_services', viewValue: 'Hair Services'},
+    {value: 'facials', viewValue: 'Facials'},
+    {value: 'makeup', viewValue: 'Makeup'},
+  ];
+
+
+
 
   constructor(
     private fb: FormBuilder,
@@ -23,13 +38,17 @@ export class BookingComponent implements OnInit {
   ngOnInit() {
     this.Appinment_form = this.fb.group({
       name: ['', Validators.required],
-      service: ['', Validators.required],
+       service: ['', Validators.required],
       date: ['', Validators.required],
       time: ['', Validators.required]
     });
   }
 
   submitBooking(): void {
+    let appointmentData = this.Appinment_form.getRawValue();
+    appointmentData.service = this.selectedValue;
+    console.log('Submitting booking data:', appointmentData);
+
     if (this.Appinment_form.invalid) {
       this.snackBar.open("Please fill or enter valid details", 'Close', {
         duration: 3000,
@@ -39,10 +58,9 @@ export class BookingComponent implements OnInit {
       return;
     }
 
-    let appointmentData = this.Appinment_form.getRawValue();
-    console.log('Submitting booking data:', appointmentData);
+   
 
-    this.http.post("http://localhost:5000/api/user/appoinment", appointmentData, {
+    this.http.post("http://localhost:5000/api/user/appointment", appointmentData, {
       withCredentials: true
     }).subscribe(
       (res: any) => {
@@ -52,6 +70,9 @@ export class BookingComponent implements OnInit {
           verticalPosition: 'bottom',
           horizontalPosition: 'center'
         });
+        setTimeout(() => {
+          window.location.href ='/appointment';
+        }, 1000);
       },
       (err) => {
         console.error('Booking error:', err);
