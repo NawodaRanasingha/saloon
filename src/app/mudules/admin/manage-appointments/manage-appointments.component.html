@@ -1,7 +1,4 @@
 <div class="main-container">
-  <div class="dashboard">
-    <app-dashboard></app-dashboard>
-  </div>
   <div class="content">
     <div class="container">
       <table class="table table-bordered" border="1">
@@ -23,15 +20,16 @@
         </thead>
         <tbody>
        
-          <tr *ngFor="let appointment of appointments">
-            <td>{{ appointment.userId }}</td>
+          <tr *ngFor="let appointment of appointments,let i = index">
+            <td>{{i+1}}</td>
             <td>{{ appointment.name }}</td>
             <td>{{ appointment.service }}</td>
             <td>{{ appointment.date }}</td>
             <td>{{ appointment.time }}</td>
             <td>
-              <button (click)="editAppointment(appointment)" class="btn btn-primary">Edit</button>
+              <!-- <button (click)="editAppointment(appointment)" class="btn btn-primary">Edit</button> -->
               <button (click)="deleteAppointment(appointment.userId)" class="btn btn-danger">Delete</button>
+              <button (click)="confirmAppointment(appointment._id)" class="btn btn-danger">Confirm</button>
             </td>
           </tr>
         </tbody>

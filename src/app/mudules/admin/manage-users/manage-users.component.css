@@ -64,6 +64,8 @@
 
   .main-container {
     display: flex;
+    width: 83%;
+    margin-left: 9%;
   }
   
   .dashboard {

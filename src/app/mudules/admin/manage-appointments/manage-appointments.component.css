@@ -25,6 +25,8 @@
 
   .main-container {
     display: flex;
+    margin-left: 9%;
+    width: 90%;
   }
   
   .dashboard {
