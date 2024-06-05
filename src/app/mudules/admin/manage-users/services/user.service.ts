@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
   private apiUrl = 'http://localhost:3000/api/users'; // Replace with your API endpoint
+  private apiUrl2 = 'http://localhost:5000/api/find-all/users';
 
   constructor(private http: HttpClient) {}
 
@@ -18,5 +19,10 @@ export class UserService {
   // Delete a user by ID
   deleteUser(userId: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${userId}`);
+  }
+
+  //show all users
+  showAllusers(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl2);
   }
 }

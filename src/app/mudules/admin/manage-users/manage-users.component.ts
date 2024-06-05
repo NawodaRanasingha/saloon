@@ -13,6 +13,7 @@ export class ManageUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadUsers();
+    this.getAllusers();
   }
 
   loadUsers(): void {
@@ -40,5 +41,14 @@ export class ManageUsersComponent implements OnInit {
         console.error('Failed to delete user', error);
       }
     );
+  }
+  
+
+  getAllusers(): void {
+    this.userService.showAllusers().subscribe(
+      (data) => {
+      this.users = data;
+      console.log(this.users)
+    });
   }
 }
