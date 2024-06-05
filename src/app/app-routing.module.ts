@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { BookingComponent } from './components/booking/booking.component';
@@ -10,6 +10,7 @@ import { AdminComponent } from './mudules/admin/admin.component';
 import { DashboardComponent } from './mudules/admin/dashboard/dashboard.component';
 import { ManageAppointmentsComponent } from './mudules/admin/manage-appointments/manage-appointments.component';
 import { ManageUsersComponent } from './mudules/admin/manage-users/manage-users.component';
+import { ViewAppointmentsComponent } from './mudules/admin/components/view-appointments/view-appointments.component';
 
 const routes: Routes = [
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     { path:'',redirectTo:'/admin/dashboard',pathMatch:'full'},
     {path: "dashboard",component :DashboardComponent},
     {path: "manageAppointments",component :ManageAppointmentsComponent},
-    {path: "manageusers",component :ManageUsersComponent}]},
+    {path: "manageusers",component :ManageUsersComponent},
+  {path:"all-apoinments",component:ViewAppointmentsComponent},]},
 
 
 

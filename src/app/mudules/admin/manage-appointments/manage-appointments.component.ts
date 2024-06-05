@@ -12,7 +12,7 @@ export class ManageAppointmentsComponent implements OnInit {
   appointments: any[] = [];
 
   constructor(private appointmentService: AppointmentService,
-    private Toast: NgToastService,
+
     private snackBar: MatSnackBar,
   ) {}
 
@@ -35,15 +35,18 @@ export class ManageAppointmentsComponent implements OnInit {
     // Implement edit functionality
   }
 
-  deleteAppointment(userId: string): void {
-    this.appointmentService.deleteAppointment(userId).subscribe(() => {
-      this.getAppointments();
-    });
+  rejectAppointment(userId: string,app:any): void {
+    this.appointmentService.setreject(userId,app).subscribe({
+      next:(data)=>{
+        this.snackBar.open('appoinment rejected', 'Close', { duration: 3000, verticalPosition: 'bottom', horizontalPosition: 'center' });
+        this.getAppointments()
+      }
+    })
   }
 
-  confirmAppointment(userId: string): void {
+  confirmAppointment(userId: string,app:any): void {
     console.log(userId)
-    this.appointmentService.setapprove(userId).subscribe({
+    this.appointmentService.setapprove(userId,app).subscribe({
       next:(data)=>{
         this.snackBar.open('appoinment approved sucessfully', 'Close', { duration: 3000, verticalPosition: 'bottom', horizontalPosition: 'center' });
         this.getAppointments()

@@ -12,6 +12,7 @@
           <tr>
             <th>User ID</th>
             <th>Name</th>
+            <th>email</th>
             <th>Service</th>
             <th>Date</th>
             <th>Time</th>
@@ -23,13 +24,14 @@
           <tr *ngFor="let appointment of appointments,let i = index">
             <td>{{i+1}}</td>
             <td>{{ appointment.name }}</td>
+            <td>{{ appointment.email }}</td>
             <td>{{ appointment.service }}</td>
             <td>{{ appointment.date }}</td>
             <td>{{ appointment.time }}</td>
             <td>
               <!-- <button (click)="editAppointment(appointment)" class="btn btn-primary">Edit</button> -->
-              <button (click)="deleteAppointment(appointment.userId)" class="btn btn-danger">Delete</button>
-              <button (click)="confirmAppointment(appointment._id)" class="btn btn-danger">Confirm</button>
+              <button (click)="rejectAppointment(appointment._id,appointment)" class="btn btn-danger">reject</button>
+              <button (click)="confirmAppointment(appointment._id,appointment)" class="btn btn-danger">Confirm</button>
             </td>
           </tr>
         </tbody>
