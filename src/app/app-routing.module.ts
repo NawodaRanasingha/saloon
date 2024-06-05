@@ -28,7 +28,12 @@ const routes: Routes = [
     {path: "dashboard",component :DashboardComponent},
     {path: "manageAppointments",component :ManageAppointmentsComponent},
     {path: "manageusers",component :ManageUsersComponent},
-  {path:"all-apoinments",component:ViewAppointmentsComponent},]},
+  {path:"all-apoinments",component:ViewAppointmentsComponent},
+
+  {path: "homee",component :HomeComponent},
+
+
+]},
 
 
 

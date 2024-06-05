@@ -1,10 +1,7 @@
-export const adminData = [
-     {
-          routeLink: 'dashboard',
-          icon: 'fas fa-home',
-          Label: 'Dashboard'
+import { RouterLink } from "@angular/router";
 
-     },
+export const adminData = [
+    
      {
           routeLink: 'manageAppointments',
           icon: 'fas fa-layer-group',
@@ -18,11 +15,22 @@ export const adminData = [
      },
      {
           routeLink: 'all-apoinments',
-          icon: 'fas fa-users-cog',
-          Label: 'Appoinments'
+          icon: 'fas fa-calendar-check',
+          Label: 'Appoinment status'
+     },
+     {
+          routeLink: 'homee',
+          icon: 'fas fa-home',
+          Label: 'Back to home'
+
      },
 
 
+// {
+//      RouterLink:'homee',
+//      icon :'fas fa-sign-out-alt',
+//      Label :'Log out'
+// },
 
 
 ]
