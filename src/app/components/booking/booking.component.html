@@ -1,7 +1,7 @@
  <app-navbar></app-navbar>
 
 <div class="background">
-  <br><br>
+  <br><br><br>
 
 <div class="frm">
     
@@ -20,6 +20,13 @@
                   <mat-label>Your Name</mat-label>
                   <input matInput placeholder="Your Name" value="Your Name" formControlName="name">
                 </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Your Email" value="Email" formControlName="email">
+              </mat-form-field>
+
+
                   <mat-form-field class="example-full-width">
                   <mat-label>Select Service</mat-label>
                   <mat-select [(ngModel)]="selectedValue" name="Service" formControlName="service">

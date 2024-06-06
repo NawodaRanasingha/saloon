@@ -26,7 +26,7 @@ export class AppointmentService {
   }
   setreject(id:String,data:any): Observable<any[]> {
     console.log(id)
-    return this.http.put<any>(`${this.apiUrl4}/${id}`,data);
+    return this.http.post<any>(`${this.apiUrl4}/${id}`,data);
     
   }
 
